@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guide</title>
+        <style>
+            html {
+                background: black;
+                color: white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            
+            header {
+                justify-items: center;
+                border-bottom: 2px solid;
+                border-radius: 55%;                
+                border-top: 2px solid red;                
+            }
+           
+            table {
+                border: 2px solid white;
+                width: 90%;
+                table-layout: fixed;
+                border-collapse: collapse;
+                font-size: large;
+            }
+
+            th, td {
+                padding: 1%;
+                border-bottom: 1px solid;
+            }
+
+            th {
+                border-right: 1px solid;
+            }
+
+            td {
+                background: none;
+            }
+
+            tr:nth-child(1) {
+                color: red;
+                background: rgba(255, 0, 0, 0.166);
+                font-size: xx-large;
+            }
+            
+            img {
+               display: none;
+                             
+            }
+
+            button {
+                width: 105px;
+                padding: 10px;
+                margin-bottom: 10px;
+                anchor-name: --my-anchor;
+            }
+
+            button:hover img {
+                position: absolute;
+                display: inline-flex;
+                position-anchor: --my-anchor;
+                inset-inline: anchor(end);
+            }
+
+           
+            #writingimg{
+                width: 50%;
+                height: 50%;
+            }
+
+            #spiritboximg {
+                width: 80%;
+                height: 80%;
+            }
+             .buttonContainer {
+                display: flex;
+                gap: 10px;                
+            }
+
+            .tableContainer {
+                flex-grow: 1;
+                width: 100%;
+
+            }
+            .sidebutton {
+                width: 100px;
+                flex-shrink: 0;
+            
+
+            }
+            
+
+            
+           
+          
+            
+            
+        </style>
+    </head>
+    <body>
+        <header><h1>Guide</h1></header>
+        <div class="buttonContainer">
+            <aside class="sidebutton">
+        <button id="emf" onclick="emfChange()">EMF<img src="images/emf5.jpeg"> </button>
+        <script>
+            function emfChange() {
+                const emfTd = document.querySelectorAll('#tdEMF');
+                emfTd.forEach( (t) => {
+                    if (t.style.background === 'none'){
+                    t.style.background = 'blue';
+                }else {
+                    t.style.background = 'none';
+                }
+                })
+            }
+        </script>
+       
+        <button id="ghostorbs" onclick="orbsChange()">Ghost Orbs<img src="images/ghostorbgif.gif"></button>
+        <script>
+            function orbsChange() {
+                const orbsTd = document.querySelectorAll('#tdghostorbs');
+                orbsTd.forEach( (o) => {
+                    if (o.style.background === 'none') {
+                        o.style.background = 'grey'
+                    } else {
+                        o.style.background = 'none'
+                    }
+                } )
+            }
+        </script>
+        <button id="dots" onclick="dotsChange()">Projector DOTS<img src="images/DOTS.gif"></button>
+        <script>
+            function dotsChange() {
+                const dotsTd = document.querySelectorAll('#tdDots');
+                dotsTd.forEach( (d) => {
+                    if (d.style.background === 'none') {
+                        d.style.background = "rgb(80, 228, 16)"
+                    } else {
+                        d.style.background = 'none'
+                    }
+                })
+            }
+        </script>
+        <button id="uv" onclick="uvChange()">Ultraviolet<img src="images/ultraviolet.jpeg"></button>
+        <script>
+            function uvChange() {
+                const tdUV = document.querySelectorAll('#tdUV')
+                tdUV.forEach((u) => {
+                    if(u.style.background === 'none') {
+                        u.style.background = 'violet'
+                    } else {
+                        u.style.background = 'none'
+                    }
+                })
+
+            }
+        </script>
+        <button id="spiritbox" onclick="spiritboxChange()">Spirit Box<img id="spiritboximg" src="images/spiritbox.gif"></button>
+        <script>
+            function spiritboxChange() {
+                const tdSpiritbox = document.querySelectorAll('#tdSpiritbox');
+                tdSpiritbox.forEach((s) => {
+                    if (s.style.background === 'none') {
+                        s.style.background = 'yellow'
+                    } else {
+                        s.style.background = 'none'
+                    }
+                })
+            }
+        </script>
+        <button id="freezing" onclick="freezingChange()">Freezing Temp<img src="images/freezingtemp.jpeg"></button>
+        <script>
+            function freezingChange() {
+                const tdfreezing = document.querySelectorAll('#tdfreezing');
+                tdfreezing.forEach((f) => {
+                    if (f.style.background === 'none') {
+                        f.style.background = 'cyan';
+                    } else {
+                        f.style.background = 'none'
+                    }
+                })
+            }
+        </script>
+        <button id="writing" onclick="writingChange()">Ghost Writing<img id="writingimg" src="images/ghostwriting.gif"></button>
+        <script>
+            function writingChange() {
+                const tdWriting = document.querySelectorAll('#tdWriting')
+                tdWriting.forEach( (w) => {
+                    if (w.style.background === 'none'){
+                        w.style.background = '#ffffff79'
+                    } else {
+                        w.style.background = 'none'
+                    }
+                })
+
+            }
+        </script>
+    <button onclick="clearTable()">Clear</button>
+    <script>
+        function clearTable() {
+            const tdTable = document.querySelectorAll('td')
+            tdTable.forEach((t) => {
+                t.style.background = 'none'
+            })
+        }
+    </script>
+
+        <dialog id="testDialog">  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zX-gJUfQICA?si=zJb-tnVTrFEzvgzO&amp;start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+        
+        <button onclick="testDialog.close() ">  Close  </button> </dialog>
+        <button onclick="testDialog.showModal() " style="padding: 0;">  Open For Video with Tips </button>
+        
+        </aside>
+        
+        <div class="tableContainer">
+       
+        <table>
+            <tr>
+                <th scope="col" rowspan="1">Ghost</th>
+                <th scope="col" colspan="3">Evidence</th>
+            </tr>
+            <tr>
+                <th scope="row">Aswang</th>
+                <td id="tdfreezing">Freezing Temp</td>
+                <td id="tdWriting">Ghost Writing</td>
+                <td id="tdDots">Projector DOTS</td>
+            </tr>
+            <tr>
+                <th scope="row">Banshee</th>
+                <td id="tdghostorbs">Ghost Orbs</td>
+                <td id="tdUV">Ultraviolet</td>
+                <td id="tdDots">Projector DOTS</td>
+            </tr>
+            <tr>
+                <th scope="row">Dayan</th>
+                <td id="tdEMF">EMF</td>
+                <td id="tdghostorbs">Ghost Orbs</td>
+                <td id="tdSpiritbox">Spirit Box</td>
+            </tr>
+            <tr>
+                <th scope="row">Demon</th>
+                <td id="tdfreezing">Freezing Temp</td>
+                <td id="tdUV">Ultraviolet</td>
+                <td id="tdWriting">Ghost Writing</td>
+            </tr>
+            <tr>
+                <th scope="row">Deogen</th>
+                <td id="tdSpiritbox">Spirit Box</td>
+                <td id="tdWriting">Ghost Writing</td>
+                <td id="tdDots">Projector DOTS</td>
+            </tr>
+            <tr>
+                <th scope="row">  Gallu  </th>
+                <td id="tdEMF">   EMF </td>
+                <td id="tdUV">  Ultraviolet  </td>
+                <td id="tdSpiritbox">  Spirit Box  </td>
+            </tr>
+            <tr>
+                <th scope="row">  Goryo  </th>
+                <td id="tdEMF">  EMF  </td>
+                <td id="tdUV">  Ultraviolet  </td>
+                <td id="tdDots">  Projector DOTS  </td>
+            </tr>
+            <tr>
+                <th scope="row"> Hantu   </th>
+                <td id="tdghostorbs">  Ghost Orbs  </td>
+                <td id="tdfreezing">  Freezing Temp  </td>
+                <td id="tdUV">  Ultraviolet  </td>
+            </tr>
+            <tr>
+                <th scope="row">  Jinn  </th>
+                <td id="tdEMF">   EMF </td>
+                <td id="tdfreezing">  Freezing Temp  </td>
+                <td id="tdUV"> Ultraviolet   </td>
+            </tr>
+            <tr>
+                <th scope="row">  Kormos  </th>
+                <td id="tdghostorbs">  Ghost Orbs  </td>
+                <td id="tdSpiritbox">  Spirit Box  </td>
+                <td id="tdUV">  Ultraviolet  </td>
+            </tr>
+            <tr>
+                <th scope="row">  Mare  </th>
+                <td id="tdghostorbs">  Ghost Orbs  </td>
+                <td id="tdSpiritbox">  Spirit Box  </td>
+                <td id="tdWriting">  Ghost Writing  </td>
+            </tr>
+            <tr>
+                <th scope="row"> Moroi </th>
+                <td id="tdSpiritbox"> Spirit Box </td>
+                <td id="tdfreezing"> Freezing Temps </td>
+                <td id="tdWriting"> Ghost Writing </td>
+            </tr>
+            <tr>
+                <th scope="row"> Myling </th>
+                <td id="tdEMF"> EMF </td>
+                <td id="tdUV"> Ultraviolet </td>
+                <td id="tdWriting"> Ghost Writing </td>
+            </tr>
+            <tr>
+                <th scope="row"> Obake </th>
+                <td id="tdEMF"> EMF </td>
+                <td id="tdghostorbs"> Ghost Orbs </td>
+                <td id="tdUV"> Ultraviolet </td>
+            </tr>
+            <tr>
+                <th scope="row"> Obambo </th>
+                <td id="tdUV"> Ultraviolet </td>
+                <td id="tdWriting"> Ghost Writing </td>
+                <td id="tdDots"> Projector DOTS </td>
+            </tr>
+            <tr>
+                <th scope="row"> Oni </th>
+                <td id="tdEMF">EMF</td>
+                <td id="tdfreezing">Freezing Temp</td>
+                <td id="tdDots">Projector DOTS</td>
+            </tr>
+            <tr>
+                <th scope="row">Onryo</th>
+                <td id="tdghostorbs">Ghost Orbs</td>
+                <td id="tdSpiritbox">Spirit Box</td>
+                <td id="tdfreezing">Freezing Temp</td>
+            </tr>
+            <tr>
+                <th scope="row">Phantom</th>
+                <td id="tdSpiritbox">Spirit Box</td>
+                <td id="tdUV">Ultraviolet</td>
+                <td id="tdDots">Projector DOTS</td>
+            </tr>
+            <tr>
+                <th scope="row">Poltergeist</th>
+                <td id="tdSpiritbox">Spirit Box</td>
+                <td id="tdUV">Ultraviolet</td>
+                <td id="tdWriting">Ghost Writing</td>
+            </tr>
+            <tr>
+                <th scope="row">Raiju</th>
+                <td id="tdEMF">EMF</td>
+                <td id="tdghostorbs">Ghost Orbs</td>
+                <td id="tdDots">Projector DOTS</td>
+            </tr>
+            <tr>
+                <th scope="row">Revenant</th>
+                <td id="tdghostorbs">Ghost Orbs</td>
+                <td id="tdfreezing">Freezing Temp</td>
+                <td id="tdWriting">Ghost Writing</td>
+            </tr>
+            <tr>
+                <th scope="row">Shade</th>
+                <td id="tdEMF">EMF</td>
+                <td id="tdfreezing">Freezing Temp</td>
+                <td id="tdWriting">Ghost Writing</td>
+            </tr>
+            <tr>
+                <th scope="row">Spirit</th>
+                <td id="tdEMF">EMF</td>
+                <td id="tdSpiritbox">Spirit Box</td>
+                <td id="tdWriting">Ghost Writing</td>
+            </tr>
+            <tr>
+                <th scope="row">Thaye</th>
+                <td id="tdghostorbs">Ghost Orbs</td>
+                <td id="tdWriting">Ghost Writing</td>
+                <td id="tdDots">Projector Orbs</td>
+            </tr>
+            <tr>
+                <th scope="row">The Mimic</th>
+                <td id="tdSpiritbox">Spirit Box</td>
+                <td id="tdfreezing">Freezing Temp</td>
+                <td id="tdUV">Ultraviolet</td>
+            </tr>
+            <tr>
+                <th scope="row">Twins</th>
+                <td id="tdEMF">EMF</td>
+                <td id="tdSpiritbox">Spirit Box</td>
+                <td id="tdfreezing">Freezing Temp</td>
+            </tr>
+            <tr>
+                <th scope="row">Wraith</th>
+                <td id="tdEMF">EMF</td>
+                <td id="tdSpiritbox">Spirit Box</td>
+                <td id="tdDots">Projector DOTS</td>
+            </tr>
+            <tr>
+                <th scope="row">Yokai</th>
+                <td id="tdghostorbs">Ghost Orbs</td>
+                <td id="tdSpiritbox">Spirit Box</td>
+                <td id="tdDots">Projector DOTS</td>
+            </tr>
+            <tr>
+                <th scope="row">Yurei</th>
+                <td id="tdghostorbs">Ghost Orbs</td>
+                <td id="tdfreezing">Freezing Temp</td>
+                <td id="tdDots">Projector DOTS</td>
+            </tr>
+
+        </table>
+        </div>
+        </div>
+          
+
+        
+    </body>
+</html>
